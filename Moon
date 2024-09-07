@@ -1,0 +1,14 @@
+import MoonPaySdk
+
+let params = MoonPayBuyQueryParams(apiKey: "pk_test_Kcn9uQA5vR1bw4QTp8gloqFxuDs8lGVa")
+
+params.setBaseCurrencyCode(value: "GBP")
+params.setBaseCurrencyAmount(value: 800)
+
+let config = MoonPaySdkBuyConfig(
+  debug: false,
+  environment: MoonPayWidgetEnvironment.sandbox,
+  params: params
+)
+
+let moonPaySdk = MoonPayiOSSdk(config: config)
